@@ -9,15 +9,13 @@ import Work from "./components/Work";
 const App = () => {
   return (
     <div className="w-full h-screen bg-banner-bg bg-no-repeat bg-center bg-cover text-xl">
-      <div>
-        <Design></Design>
-        <Navbar></Navbar>
-        <Home></Home>
-        <About></About>
-        <Skills></Skills>
-        <Work></Work>
-        <Contact></Contact>
-      </div>
+      <Design></Design>
+      <Navbar></Navbar>
+      <Home></Home>
+      <About></About>
+      <Skills></Skills>
+      <Work></Work>
+      <Contact></Contact>
     </div>
   );
 };

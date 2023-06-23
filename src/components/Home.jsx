@@ -19,7 +19,7 @@ const Home = () => {
           are performance-optimized and secure. Skilled in developing custom API
           endpoints and integrating third-party services. Experienced in
           developing Single Page Applications (SPAs) using React.js and Redux.
-          Experienced in deploying applications on Heroku and AWS.
+          Experienced in deploying applications on Netlify and AWS.
         </p>
         <div>
           <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-indigo-500">

@@ -1,16 +1,26 @@
+import Slider from "react-slick";
 import { data } from "../data/data";
 
 const Work = () => {
-  // projects file
   const project = data;
-  //setProject(data);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+  };
 
   return (
     <div
       name="work"
-      className="w-full md:h-screen text-gray-300 bg-banner-bg bg-center bg-cover"
+      className="w-full h-full md:h-screen text-gray-300 bg-banner-bg bg-center bg-cover"
     >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full text-center">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600">
             Work
@@ -18,45 +28,41 @@ const Work = () => {
           <p className="py-6">// Check out some of my recent work</p>
         </div>
 
-        {/* container for projects */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {/* Gird Item */}
-          {project.map((item, index) => (
-            <div
-              key={index}
-              style={{ backgroundImage: `url(${item.image})` }}
-              className="shadow-lg shadow-[#040c16] group container rounded-md 
-              flex justify-center text-center items-center mx-auto content-div "
-            >
-              {/* Hover effect for images */}
-              <div className="opacity-0 group-hover:opacity-100 ">
-                <span className="text-2xl font bold text-white tracking-wider ">
-                  {item.name}
-                </span>
-                <div className="pt-8 text-center ">
-                  {/* eslint-disable-next-line */}
-                  <a href={item.github} target="_blank">
-                    <button
-                      className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
-                    >
-                      Code
-                    </button>
+        <Slider {...settings}>
+          {project.map((item) => {
+            const { id, name, image, github, live } = item;
+            return (
+              <div
+                key={id}
+                className="max-w-sm max-h-90 rounded overflow-hidden shadow-lg mx-2"
+              >
+                <img className="w-fit" src={image} alt={name} />
+                <div className="px-6 py-4">
+                  <div className="font-bold text-l mb-2">{name}</div>
+                  <p className="text-gray-200 text-base">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
+                    exercitationem praesentium nihil.
+                  </p>
+                </div>
+                <div className="px-6 pt-2 pb-2">
+                  <a
+                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    href={github}
+                  >
+                    #Github
                   </a>
-                  {/* eslint-disable-next-line */}
-                  <a href={item.live} target="_blank">
-                    <button
-                      className="text-center rounded-lg px-4 py-3 m-2
-                       bg-white text-gray-700 font-bold text-lg"
-                    >
-                      Live
-                    </button>
+                  <a
+                    className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                    href={live}
+                  >
+                    #Live
                   </a>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            );
+          })}
+        </Slider>
       </div>
     </div>
   );

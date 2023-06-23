@@ -1,3 +1,4 @@
+import CVImage from "../assets/cvimage.jpg";
 const About = () => {
   return (
     <div
@@ -13,20 +14,35 @@ const About = () => {
           </div>
           <div></div>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-right text-4xl font-bold">
+        <div className="max-w-[1000px] grid sm:grid-cols-2 gap-8 px-4">
+          <div className="sm:text-left text-2l font-bold flex gap-2">
             <p>
-              Hi. I'm Subhash Kandhway, nice to meet you. Please take a look
-              around.
+              Hi. I'm Subhash Kandhway currently working in{" "}
+              <span className="bg-purple-500">Deloitte.</span>, nice to meet
+              you. Please take a look around.
+              <img
+                src={CVImage}
+                alt="person-image"
+                className="h-90 w-80 mt-4 mx-20"
+              />
             </p>
           </div>
           <div>
             <p>
-              I am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?
+              I have gained extensive experience in React.js with a strong focus
+              on frontend development. Over the course of 1 year, I have honed
+              my skills and acquired an in-depth understanding of various
+              React.js technologies.Throughout my journey, I have been
+              recognized for my contributions and awarded the prestigious R&R
+              award three times, demonstrating my commitment to excellence.
+              Additionally, I was honored with the Applause award for my
+              exceptional performance and dedication. This includes proficiency
+              in React Router, Redux Toolkit, React Query, and leveraging the
+              power of React hooks. I have consistently delivered high-quality
+              software solutions, exceeding expectations and driving positive
+              user experiences. Through my dedication and expertise in React.js,
+              I am confident in my ability to create exceptional applications
+              that leave a lasting impact.
             </p>
           </div>
         </div>
