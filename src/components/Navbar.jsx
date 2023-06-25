@@ -19,27 +19,52 @@ const Navbar = () => {
       {/* menu */}
       <ul className="hidden md:flex ">
         <li>
-          <Link to="home" smooth={true} duration={500}>
+          <Link
+            to="home"
+            smooth={true}
+            duration={500}
+            className="hover:underline decoration-purple-600 decoration-2 decoration-wavy"
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link to="about" smooth={true} duration={500}>
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className="hover:underline decoration-purple-600 decoration-2 decoration-wavy"
+          >
             About
           </Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} duration={500}>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={500}
+            className="hover:underline decoration-purple-600 decoration-2 decoration-wavy"
+          >
             Skills
           </Link>
         </li>
         <li>
-          <Link to="work" smooth={true} duration={500}>
+          <Link
+            to="work"
+            smooth={true}
+            duration={500}
+            className="hover:underline decoration-purple-600 decoration-2 decoration-wavy"
+          >
             Works
           </Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} duration={500}>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="hover:underline decoration-purple-600 decoration-2 decoration-wavy"
+          >
             Contact
           </Link>
         </li>

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Design from "./components/Design";
@@ -7,6 +8,14 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 
 const App = () => {
+  useEffect(() => {
+    document.body.style.zoom = "80%";
+
+    return () => {
+      // Reset the zoom to default when the component unmounts
+      document.body.style.zoom = "100%";
+    };
+  }, []);
   return (
     <div className="w-full h-screen bg-banner-bg bg-no-repeat bg-center bg-cover text-xl">
       <Design></Design>

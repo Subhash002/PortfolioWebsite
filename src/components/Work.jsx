@@ -30,20 +30,20 @@ const Work = () => {
 
         <Slider {...settings}>
           {project.map((item) => {
-            const { id, name, image, github, live } = item;
+            const { id, name, image, github, live, desc } = item;
             return (
               <div
                 key={id}
                 className="max-w-sm max-h-90 rounded overflow-hidden shadow-lg mx-2"
               >
-                <img className="w-fit" src={image} alt={name} />
+                <img
+                  className="w-full h-40 object-cover bg-center"
+                  src={image}
+                  alt={name}
+                />
                 <div className="px-6 py-4">
                   <div className="font-bold text-l mb-2">{name}</div>
-                  <p className="text-gray-200 text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Voluptatibus quia, nulla! Maiores et perferendis eaque,
-                    exercitationem praesentium nihil.
-                  </p>
+                  <p className="text-gray-200 text-sm">{desc}</p>
                 </div>
                 <div className="px-6 pt-2 pb-2">
                   <a
